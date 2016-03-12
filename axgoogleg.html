@@ -62,15 +62,17 @@
 		data.addRows(1);
 	        
 	        chart = new google.visualization.Gauge(document.getElementById('chart_div'));
-	        options = {width: 320, 
-                       height: 320, 
-                       yellowColor: '#01c1ff', 
-                       redFrom: 20,
-                       redTo: 30,
-                       yellowFrom:0,
-                       yellowTo: 10, 
-                       minorTicks: 1, 
-                       min: 0, max: 30};
+	        options = {
+				width: 320, 
+				height: 320,
+				yellowColor: '#01c1ff', 
+				redFrom: 20,
+				redTo: 30,
+				yellowFrom:0,
+				yellowTo: 10, 
+				minorTicks: 5,
+				majorTicks: ["5", "10", "15", "20", "25"],
+				min: 0, max: 30};
 	
 		loadData();
 
