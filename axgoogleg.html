@@ -1,8 +1,7 @@
 <html>
   <head>
 
-  <title>Google Gauge - ThingSpeak</title>	
-    	
+  <title>Google Gauge - ThingSpeak</title>
   </head>
 		
   <body>
@@ -27,7 +26,7 @@
 
 	function displayData(point) {
 	
-		data.setValue(0, 0, 'Temp');
+		data.setValue(0, 0, 'Temperature');
 		data.setValue(0, 1, point);
 		chart.draw(data, options);
 	
@@ -45,9 +44,9 @@
 	
 		if (p)
 		{
-          //  p = (p / 1) * 1;
-            p = p;
-            p = parseFloat( p.toFixed(2) );
+            p = (p / 1023) * 1023;
+          //p = p
+            p = parseFloat( p.toFixed(3) );
 			displayData(p);
 		}
 	
@@ -67,13 +66,10 @@
                        height: 320, 
                        yellowColor: '#01c1ff', 
                        redFrom: 20,
-                       redTo: 25,
+                       redTo: 30,
                        yellowFrom:0,
-                       yellowTo: 10,
-						greenFrom: 13,
-						greenTo: 18,
-					   majorTicks: ["5", "10" ,"15", "20", "25"],
-					   minorTicks: 5, 
+                       yellowTo: 10, 
+                       minorTicks: 1, 
                        min: 0, max: 30};
 	
 		loadData();
