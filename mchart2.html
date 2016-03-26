@@ -23,24 +23,24 @@
 </style>
 <script type="text/javascript">
   // variables for the first series
+  
+  var series_results = 576;
+  
   var series_1_channel_id = 85519;
   var series_1_field_number = 1;
   var series_1_read_api_key = '2T6ZAZPFIR5HSSXY';
-  var series_1_results = 300;
   var series_1_color = '#ff0000';
 
   // variables for the second series
   var series_2_channel_id = 85519;
   var series_2_field_number = 2;
   var series_2_read_api_key = '2T6ZAZPFIR5HSSXY';
-  var series_2_results = 300;
   var series_2_color = '#0000ff';
   
     // variables for the third series
   var series_3_channel_id = 85519;
   var series_3_field_number = 3;
   var series_3_read_api_key = '2T6ZAZPFIR5HSSXY';
-  var series_3_results = 300;
   var series_3_color = '#00ff00';
 
   // chart title
@@ -58,11 +58,11 @@
     // add a blank chart
     addChart();
     // add the first series
-    addSeries(series_1_channel_id, series_1_field_number, series_1_read_api_key, series_1_results, series_1_color);
+    addSeries(series_1_channel_id, series_1_field_number, series_1_read_api_key, series_results, series_1_color);
     // add the second series
-    addSeries(series_2_channel_id, series_2_field_number, series_2_read_api_key, series_2_results, series_2_color);
+    addSeries(series_2_channel_id, series_2_field_number, series_2_read_api_key, series_results, series_2_color);
 	// add the third series
-    addSeries(series_3_channel_id, series_3_field_number, series_3_read_api_key, series_3_results, series_3_color);
+    addSeries(series_3_channel_id, series_3_field_number, series_3_read_api_key, series_results, series_3_color);
   });
 
   // add the base chart
