@@ -44,7 +44,7 @@
 	
 		if (p)
 		{
-            p = ((p / 1023) * 1023) - 0.5;
+            p = (p / 1023) * 1023;
           //p = p
             p = parseFloat( p.toFixed(3) );
 			displayData(p);
